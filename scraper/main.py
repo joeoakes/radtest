@@ -19,7 +19,7 @@ try:
   url = urllib.request.urlopen(json.loads(content))
 
   #Connect to the MongoDB Database
-  clientDB = MongoClient('localhost', 27017)
+  clientDB = MongoClient('mongodb', 27017)
   print("Connected to MongoDB")
   db = clientDB.test_database
   print("Got the Database test_database")
