@@ -2,7 +2,7 @@
 #Author: Joe Oakes, Hof Uni, PSA
 #Date 10/5/2022
 
-class DataStoreWebPageContent:
+class DataStore:
     def connectDatabase(self, ):
         None
         #TODO:
