@@ -6,23 +6,22 @@ import sys, datetime
 #pip install pymongo
 from pymongo import MongoClient
 
+configs = None
 try:
-    #JSON Config to work with and open
-    configs = open('radscrap.json', 'r')
-    content = configs.read()
+  #JSON Config to work with and open
+  configs = open('radscrap.json', 'r')
+  content = configs.read()
 
-    client = MongoClient('localhost', 27017)
-    print("Connected to MongoDB")
-    db = client.test_database
-    print("Got the Database test_database")
-    collection = db.test_collection
-    print("Got the Collection")
+  client = MongoClient('localhost', 27017)
+  print("Connected to MongoDB")
+  db = client.test_database
+  print("Got the Database test_database")
+  collection = db.test_collection
+  print("Got the Collection")
+
+  configs.close()
 
 except:
-    e = sys.exc_info()[0]
-    print("error: %s" % e)
-
-configs.close()
-
-
+  e = sys.exc_info()[0]
+  print("error: %s" % e)
 
