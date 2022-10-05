@@ -1,5 +1,7 @@
-#Agent Class
-#Properties Name, ListofWebsites, Starttime, Status, ScrapeTYpe, Database, APIUsed
+#Purpose: Agent class
+#Author: Joe Oakes
+#Date 10/5/2022
+
 class Agent:
     def __init__(self,name, listofWebsites, starttime, status, scrapeType, database, apiUsed):
         self.name = name

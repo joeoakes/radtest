@@ -1,5 +1,5 @@
-#Purpose: Python3 to convert the certificate to hex cert for Bare machine
-#Author: Joe Oakes
+#Purpose: Python3 Web Scraping project for Radwell.
+#Author: Joe Oakes, Hof Uni
 #Date 10/5/2022
 
 # importing python modules
