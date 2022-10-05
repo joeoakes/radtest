@@ -3,23 +3,25 @@
 #Date 10/5/2022
 
 import sys, datetime
-#pip install pymongo
+#make sure to perform pip install pymongo
 from pymongo import MongoClient
 
-configs = None
 try:
   #JSON Config to work with and open
   configs = open('radscrap.json', 'r')
   content = configs.read()
 
-  client = MongoClient('localhost', 27017)
+  #Connect to the MongoDB Database
+  clientDB = MongoClient('localhost', 27017)
   print("Connected to MongoDB")
-  db = client.test_database
+  db = clientDB.test_database
   print("Got the Database test_database")
   collection = db.test_collection
   print("Got the Collection")
 
+  #Teardown Section
   configs.close()
+  clientDB.close()
 
 except:
   e = sys.exc_info()[0]
