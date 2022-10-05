@@ -7,9 +7,9 @@ class DataStoreWebPageContent:
         self.resourceId = resourceId
         self.resourceContent =  resourceContent
     def connectDatabase(self, ):
+        None
     def getResourceById(self, resourceId):
-        #GET
         self.get(resourceId)
     def setResource( resourceId, resourceContent):
-        #SET
+        None
         #self[resourceId] = resourceContent
