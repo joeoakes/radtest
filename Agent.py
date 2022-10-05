@@ -1,5 +1,5 @@
 #Purpose: Agent class
-#Author: Joe Oakes
+#Author: Joe Oakes, Hof Uni, PSA
 #Date 10/5/2022
 
 class Agent:

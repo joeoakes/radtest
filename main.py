@@ -1,5 +1,5 @@
 #Purpose: Python3 Web Scraping project for Radwell.
-#Author: Joe Oakes, Hof Uni
+#Author: Joe Oakes, Hof Uni, PSA
 #Date 10/5/2022
 
 # importing python modules

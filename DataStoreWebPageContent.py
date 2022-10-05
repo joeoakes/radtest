@@ -1,0 +1,11 @@
+#Purpose: Datastore for WebPage content
+#Author: Joe Oakes, Hof Uni, PSA
+#Date 10/5/2022
+
+class DataStoreWebPageContent:
+    def __init__(self, resourceId, resourceContent):
+        self.resourceId = resourceId
+        self.resourceContent =  resourceContent
+    def readResourceById(self, resourceId):
+        None
+    def saveResource( resourceId, resourceContent):
