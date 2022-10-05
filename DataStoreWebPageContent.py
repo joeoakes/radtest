@@ -3,13 +3,12 @@
 #Date 10/5/2022
 
 class DataStoreWebPageContent:
-    def __init__(self, resourceId, resourceContent):
-        self.resourceId = resourceId
-        self.resourceContent =  resourceContent
     def connectDatabase(self, ):
         None
+        #TODO:
     def getResourceById(self, resourceId):
         self.get(resourceId)
     def setResource( resourceId, resourceContent):
         None
+        # TODO:
         #self[resourceId] = resourceContent
