@@ -6,6 +6,10 @@ class DataStoreWebPageContent:
     def __init__(self, resourceId, resourceContent):
         self.resourceId = resourceId
         self.resourceContent =  resourceContent
-    def readResourceById(self, resourceId):
-        None
-    def saveResource( resourceId, resourceContent):
+    def connectDatabase(self, ):
+    def getResourceById(self, resourceId):
+        #GET
+        self.get(resourceId)
+    def setResource( resourceId, resourceContent):
+        #SET
+        #self[resourceId] = resourceContent
