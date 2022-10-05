@@ -6,6 +6,6 @@ class Agent:
         self.listofWebsites = listofWebsites
         self.starttime = starttime
         self.status = status
-        self.scrapeTyhpe = scrapeType
+        self.scrapeType = scrapeType
         self.database = database
         self.apiUsed = apiUsed
