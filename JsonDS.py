@@ -10,13 +10,12 @@ class JsonDS:
 
  def __init__(self, filename):
   self.filename = filename
-  self.content = ''
 
  def getcontent(self):
   try:
     jfile = open(self.filename, 'r')
-    self.content = jfile.read()
+    content = jfile.read()
     jfile.close()
-    return self.content
+    return content
   except FileNotFoundError:
     logging.error(str(sys.exc_info()[0]))

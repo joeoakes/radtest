@@ -8,10 +8,15 @@ import json
 # from bs4 import BeautifulSoup
 import sys
 from JsonDS import JsonDS
+from MongoDS import MongoDS
 
-# Create the json object to
+
 jsonDoc = JsonDS('radscrap.json')
 content = jsonDoc.getcontent()
+print(content)
+
+mongodoc = MongoDS('testdb', 'testcolletion')
+
 print(content)
 
   # opening the url for reading
