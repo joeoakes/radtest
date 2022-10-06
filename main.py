@@ -14,8 +14,8 @@ jsonDoc = JsonDS('radscrap.json')
 content = jsonDoc.getcontent()
 print(content)
 
-mongodoc = MongoDS()
-content = mongodoc.getcontent('TestOakes1', 'CollectionOakes')
+mongodoc = MongoDS('TestOakes1', 'CollectionOakes')
+content = mongodoc.getcontent()
 print(content)
 
   # opening the url for reading

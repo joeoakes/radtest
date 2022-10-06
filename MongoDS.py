@@ -11,11 +11,15 @@ import pymongo
 
 class MongoDS:
 
- def getcontent(self, dbname, dbcollection):
+ def __init__(self, dbname, dbcollection):
+  self.dbname = dbname
+  self.dbcollection = dbcollection
+
+ def getcontent(self):
   try:
     conn = pymongo.MongoClient('localhost', 27017)
-    db = conn[dbname]
-    col = db[dbcollection]
+    db = conn[self.dbname]
+    col = db[self.dbcollection]
     content = col.find()
     conn.close()
     return content
