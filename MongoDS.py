@@ -11,16 +11,12 @@ import pymongo
 
 class MongoDS:
 
- def __init__(self, dbname, dbcollection):
-  self.dbname = dbname
-  self.dbcollection = dbcollection
-
- def getcontent(self):
+ def getcontent(self, dbname, dbcollection):
   try:
     conn = pymongo.MongoClient('localhost', 27017)
-    db = conn.self.dbname
-    col = db.self.dbCollection
-    content = col.find_one()
+    db = conn[dbname]
+    col = db[dbcollection]
+    content = col.find()
     conn.close()
     return content
   except pymongo.errors.ConnectionFailure:
