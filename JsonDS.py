@@ -17,6 +17,6 @@ class JsonDS:
     jfile = open(self.filename, 'r')
     self.content = jfile.read()
     jfile.close()
+    return self.content
   except FileNotFoundError:
     logging.error(str(sys.exc_info()[0]))
-  return self.content
