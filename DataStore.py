@@ -4,6 +4,8 @@
 
 #make sure to perform pip install pymongo
 from pymongo import MongoClient
+#Logging facility for Python
+import logging
 
 class DataStore():
     def __init__(self, name, collection):
@@ -15,19 +17,19 @@ class Json(DataStore):
         content = configs.read()
         configs.close()
     except:
-        e = sys.exc_info()[0]
+        logging.error(sys.exc_info()[0])
 class MongoDb(DataStore):
     try:
         clientDB = MongoClient('localhost', 27017)
         db = clientDB.name
         col = db.collection
     except:
-        e = sys.exc_info()[0]
+        logging.error(sys.exc_info()[0])
 class Redis(DataStore):
     try:
         None
     except:
-        e = sys.exc_info()[0]
+        logging.error(ys.exc_info()[0])
     def getResourceById(self, resourceId):
         self.get(resourceId)
     def setResource( resourceId, resourceContent):
