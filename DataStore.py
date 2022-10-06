@@ -6,29 +6,36 @@
 from pymongo import MongoClient
 #Logging facility for Python
 import logging
+import sys
 
 class DataStore():
     def __init__(self, name, collection):
         self.name = name
         self.collection = collection
 class Json(DataStore):
-    try:
-        configs = open(name, 'r')
+    def __init__(self):
+      try:
+        configs = open(self.name, 'r')
         content = configs.read()
         configs.close()
-    except:
-        logging.error(sys.exc_info()[0])
+      except:
+        e = sys.exc_info()[0]
+        logging.error(e)
 class MongoDb(DataStore):
+  def __init__(self):
     try:
         clientDB = MongoClient('localhost', 27017)
-        db = clientDB.name
-        col = db.collection
+        db = clientDB.self.name
+        col = db.self.collection
+        clientDB.close()
     except:
-        logging.error(sys.exc_info()[0])
+        e = sys.exc_info()[0]
+        logging.error(e)
 class Redis(DataStore):
-    try:
+    def __init__(self):
+      try:
         None
-    except:
+      except:
         logging.error(ys.exc_info()[0])
     def getResourceById(self, resourceId):
         self.get(resourceId)

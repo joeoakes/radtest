@@ -16,9 +16,6 @@ try:
   # opening the url for reading​
   url = urllib.request.urlopen(json.loads(content))
 
-  #Teardown Section
-  configs.close()
-  clientDB.close()
 
 except:
   e = sys.exc_info()[0]
