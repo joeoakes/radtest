@@ -16,14 +16,6 @@ try:
   # opening the url for reading​
   url = urllib.request.urlopen(json.loads(content))
 
-  #Connect to the MongoDB Database
-  clientDB = MongoClient('localhost', 27017)
-  print("Connected to MongoDB")
-  db = clientDB.test_database
-  print("Got the Database test_database")
-  collection = db.test_collection
-  print("Got the Collection")
-
   #Teardown Section
   configs.close()
   clientDB.close()

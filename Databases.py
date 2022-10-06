@@ -4,7 +4,7 @@
 
 import enum
 
-class DatabasesTypes(enum.Enum):
+class DatabaseTypes(enum.Enum):
  json = 1
  mongodb = 2
  redis = 3
