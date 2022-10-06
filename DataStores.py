@@ -8,16 +8,6 @@ from pymongo import MongoClient
 import logging
 import sys
 
-class Json():
- def __init__(self, filename):
-   try:
-    configs = open(filename, 'r')
-    content = configs.read()
-    configs.close()
-   except:
-    logging.error(str(sys.exc_info()[0]))
- def getContent(self):
-     return self.content
 class MongoDb():
   def __init__(self, dbname, dbcollection):
     try:
