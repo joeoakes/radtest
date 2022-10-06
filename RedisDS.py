@@ -8,7 +8,7 @@ from pymongo import MongoClient
 import logging
 import sys
 
-class Redis(dbname, dbcollection):
+class RedisDS(dbname, dbcollection):
  def __init__(self):
     try:
      None
