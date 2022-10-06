@@ -7,8 +7,6 @@ import urllib.request
 import json
 from bs4 import BeautifulSoup
 import sys, datetime
-#make sure to perform pip install pymongo
-from pymongo import MongoClient
 
 try:
   #JSON Config to work with and open
