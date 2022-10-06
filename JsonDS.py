@@ -14,9 +14,9 @@ class JsonDS:
 
  def getcontent(self):
   try:
-    configs = open(self.filename, 'r')
-    self.content = configs.read()
-    configs.close()
-  except:
+    jfile = open(self.filename, 'r')
+    self.content = jfile.read()
+    jfile.close()
+  except FileNotFoundError:
     logging.error(str(sys.exc_info()[0]))
   return self.content
