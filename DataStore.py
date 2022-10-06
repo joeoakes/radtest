@@ -6,13 +6,12 @@
 from pymongo import MongoClient
 
 class DataStore():
-    def __init__(self, databaseType, databaseName, databaseCollection):
-        self.databaseType = databaseType
-        self.databaseName = databaseName
-        self.databaseCollection = databaseCollection
+    def __init__(self, name, collection):
+        self.name = name
+        self.collection = collection
 class Json(DataStore):
     try:
-        configs = open('radscrap.json', 'r')
+        configs = open(name, 'r')
         content = configs.read()
         configs.close()
     except:
@@ -20,7 +19,8 @@ class Json(DataStore):
 class MongoDb(DataStore):
     try:
         clientDB = MongoClient('localhost', 27017)
-        db = clientDB.test_database
+        db = clientDB.name
+        col = db.collection
     except:
         e = sys.exc_info()[0]
 class Redis(DataStore):
@@ -28,7 +28,6 @@ class Redis(DataStore):
         None
     except:
         e = sys.exc_info()[0]
-
     def getResourceById(self, resourceId):
         self.get(resourceId)
     def setResource( resourceId, resourceContent):
