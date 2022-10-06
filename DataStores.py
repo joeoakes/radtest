@@ -17,7 +17,7 @@ class Json():
    except:
     logging.error(str(sys.exc_info()[0]))
 class MongoDb():
-  def __init__(self, dbName, dbCollection):
+  def __init__(self, dbname, dbcollection):
     try:
      clientDB = MongoClient('localhost', 27017)
      db = clientDB.dbName
@@ -27,14 +27,14 @@ class MongoDb():
         e = sys.exc_info()[0]
         logging.error(str(sys.exc_info()[0]))
 class Redis():
-    def __init__(self):
-      try:
-        None
-      except:
-        logging.error(str(sys.exc_info()[0]))
-    def getResourceById(self, resourceId):
-        self.get(resourceId)
-    def setResource( resourceId, resourceContent):
-        None
-        # TODO:
-        #self[resourceId] = resourceContent
+ def __init__(self):
+    try:
+     None
+    except:
+     logging.error(str(sys.exc_info()[0]))
+ def getResourceById(self, resourceId):
+   self.get(resourceId)
+ def setResource( resourceId, resourceContent):
+  None
+   # TODO:
+   #self[resourceId] = resourceContent
