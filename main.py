@@ -8,16 +8,11 @@ import json
 from bs4 import BeautifulSoup
 import sys, datetime
 
-try:
-  #JSON Config to work with and open
-  configs = open('radscrap.json', 'r')
-  content = configs.read()
 
-  # opening the url for reading​
-  url = urllib.request.urlopen(json.loads(content))
+# Create the json object to 
+json = Json('radscrap.json')
+content = json.getContent()
 
-
-except:
-  e = sys.exc_info()[0]
-  print("error: %s" % e)
+  # opening the url for reading
+  #url = urllib.request.urlopen(json.loads(content))
 

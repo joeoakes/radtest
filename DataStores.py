@@ -16,17 +16,20 @@ class Json():
     configs.close()
    except:
     logging.error(str(sys.exc_info()[0]))
+ def getContent(self):
+     return self.content
 class MongoDb():
   def __init__(self, dbname, dbcollection):
     try:
      clientDB = MongoClient('localhost', 27017)
      db = clientDB.dbName
      col = db.dbCollection
+     col
      clientDB.close()
     except:
         e = sys.exc_info()[0]
         logging.error(str(sys.exc_info()[0]))
-class Redis():
+class Redis(dbname, dbcollection):
  def __init__(self):
     try:
      None
