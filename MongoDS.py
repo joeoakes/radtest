@@ -6,6 +6,9 @@
 import logging
 import sys
 
+# make sure to perform pip install pymongo
+import pymongo
+
 class MongoDS:
 
  def __init__(self, dbname, dbcollection):
@@ -14,11 +17,11 @@ class MongoDS:
 
  def getcontent(self):
   try:
-    conn = MongoClient('localhost', 27017)
+    conn = pymongo.MongoClient('localhost', 27017)
     db = conn.self.dbname
     col = db.self.dbCollection
     content = col.find_one()
     conn.close()
     return content
-  except FileNotFoundError:
+  except pymongo.errors.ConnectionFailure:
     logging.error(str(sys.exc_info()[0]))

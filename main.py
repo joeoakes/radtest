@@ -10,13 +10,12 @@ import sys
 from JsonDS import JsonDS
 from MongoDS import MongoDS
 
-
 jsonDoc = JsonDS('radscrap.json')
 content = jsonDoc.getcontent()
 print(content)
 
-mongodoc = MongoDS('testdb', 'testcolletion')
-
+mongodoc = MongoDS('TestOakes', 'CollectionOakes')
+content = mongodoc.getcontent()
 print(content)
 
   # opening the url for reading
